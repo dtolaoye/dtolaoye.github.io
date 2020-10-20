@@ -1,0 +1,202 @@
+body{
+  background-color: #183316; 
+  font-family: 'Roboto Slab', serif;
+}
+
+h1{
+  text-align: center;
+  color: yellow;
+  font-weight: bold;
+  font-family: 'Noto Serif', serif;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+  font-style: italic;
+  font-size: 50px;
+}
+
+.cards{
+  float: left;
+  width: 70px; 
+  height: 100px; 
+  background-color: white; 
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  position: relative;
+  margin-top: 10px; 
+  margin-left: 25px; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  font-size: 20px;
+}
+
+.cards2{
+  float: right;
+  width: 70px; 
+  height: 100px; 
+  background-color: white; 
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  position: relative;
+  margin-top: 10px; 
+  margin-left: 25px; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  font-size: 20px;
+}
+
+.cardsSuit{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -20px;
+  font-size: 50px;
+}
+
+.cardsSuit2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -20px;
+  font-size: 50px;
+}
+
+.hidden{
+  float: right;
+  width: 70px; 
+  height: 100px; 
+  background-color: red; 
+  color: red;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  position: relative;
+  margin-top: 10px; 
+  margin-left: 25px; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+.hiddenSuit{
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -20px;
+  font-size: 50px;
+}
+
+.cards:hover {
+  transform: scale(1.15,1.15);
+  animation: jiggle 0.5s infinite linear;
+}
+
+.cards2:hover {
+  transform: scale(1.15,1.15);
+  animation: jiggle 0.5s infinite linear;
+}
+
+.hidden:hover {
+  transform: scale(1.15,1.15);
+  animation: jiggle 0.5s infinite linear;
+}
+
+
+@keyframes jiggle {
+  /* start at 0deg and this scale size.
+     scale size is repeated here to maintain smooth scaling */
+  0% {transform: rotate(0deg) scale(1.15,1.15);}
+  /* midway rotate 2deg right */
+  50% {transform: rotate(2deg) scale(1.15,1.15);}
+  /* end rotate -2deg left */
+  100% {transform: rotate(-2deg) scale(1.15,1.15)}
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#playerlabel{
+  text-align: left;
+  font-size: 35px;
+  color: white; 
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+}
+
+.cardsContainer{
+   animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.cards2Container{
+   animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.hiddenContainer{
+   animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+
+#dlrlabel{
+  text-align: right;
+  font-size: 35px;
+  color: red;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 1); 
+}
+
+button{
+  cursor: pointer;
+  width: 90px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #000;
+  border: 2px solid #FFD800;
+  color: #FFD800;
+  font-weight: bold;
+  font-family: 'Noto Serif', serif;
+  font-size: 16px;
+  font-style: italic;
+  box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.5);
+  transition: all 0.2s linear;
+  margin: 3px;
+}
+
+button:active {
+  box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.5);
+  transform: translate(2px, 2px);
+}
+
+button:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.msg{
+  font-style: italic;
+  color: white; 
+}
+
+#controls{
+  position: fixed;
+   bottom: 100px;
+   left: 40%;
+}
+
+#winlose{
+  text-align: center;
+  font-size: 25px;
+}
